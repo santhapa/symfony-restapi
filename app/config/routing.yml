@@ -1,4 +1,8 @@
-rest_blog:
-    resource: "@RestBlogBundle/Resources/config/routing.yml"
-    prefix:   /
+rest_api:
+    type: rest
+    prefix:   /api
+    resource: "@RestApiBundle/Resources/config/routing.yml"
 
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /api/doc

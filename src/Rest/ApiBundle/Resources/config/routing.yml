@@ -1,0 +1,3 @@
+rest_post:
+    type: rest
+    resource: Rest\ApiBundle\Controller\PostController
