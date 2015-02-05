@@ -1,3 +1,0 @@
-helloPage:
-    path: /{name}
-    defaults: { _controller: RestBlogBundle:Default:index }
