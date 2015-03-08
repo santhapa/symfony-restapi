@@ -1,3 +1,40 @@
-rest_post:
+rest_all_post:
     type: rest
-    resource: Rest\ApiBundle\Controller\PostController
+    pattern: /all
+    defaults: { _controller:RestApiBundle:Post:allPosts, _format:json }
+    requirements:
+       _method: GET
+
+rest_new_post:
+    type: rest
+    pattern: /new
+    defaults: { _controller:RestApiBundle:Post:newPost, _format:json }
+    requirements:
+       _method: POST
+
+rest_edit_post:
+    type: rest
+    pattern: /edit/{id}
+    defaults: { _controller:RestApiBundle:Post:editPost, _format:json }
+    requirements:
+       _method: PUT
+
+rest_delete_post:
+    type: rest
+    pattern: /delete/{id}
+    defaults: { _controller:RestApiBundle:Post:deletePost, _format:json }
+    requirements:
+       _method: DELETE
+
+rest_get_post:
+    type: rest
+    pattern: /{id}
+    defaults: { _controller:RestApiBundle:Post:getPost, _format:json }
+    requirements:
+       _method: GET
+
+
+# for implicit routing approach
+# rest_post:
+#     type: rest
+#     resource: Rest\ApiBundle\Controller\PostController

@@ -4,10 +4,15 @@ namespace Rest\ApiBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+use JMS\Serializer\Annotation\ExclusionPolicy;
+use JMS\Serializer\Annotation\Expose;
+use JMS\Serializer\Annotation\Groups;
+use JMS\Serializer\Annotation\VirtualProperty;
+
 /**
- * Post
  * @ORM\Table(name="tbl_api_post")
- * @ORM\Entity(repositoryClass = "Rest\ApiBundle\Entity\PostRepository")
+ * @ORM\Entity(repositoryClass = "Rest\ApiBundle\Entity\PostRepository") 
+ * @ExclusionPolicy("all") 
  */
 class Post
 {
@@ -23,6 +28,7 @@ class Post
     /**
      * @var string
      * @ORM\Column(name="title", type="string", length=255, nullable=false)
+     * @Expose
      */
     private $title;
 
@@ -30,6 +36,7 @@ class Post
      * @var string
      *
      * @ORM\Column(name="body", type="text")
+     * @Expose
      */
     private $body;
 

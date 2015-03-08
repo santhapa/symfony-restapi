@@ -1,6 +1,9 @@
+test:
+    resource: "@TestTestBundle/Resources/config/routing.yml"
+
 rest_api:
     type: rest
-    prefix:   /api
+    prefix:   /api/post
     resource: "@RestApiBundle/Resources/config/routing.yml"
 
 NelmioApiDocBundle:

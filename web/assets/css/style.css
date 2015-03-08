@@ -1,0 +1,11 @@
+.alert-msg{
+	text-align: center;
+}
+
+.page-wrapper{
+	padding: 10px;
+}
+
+a:hover{
+	text-decoration: none;
+}
