@@ -89,3 +89,13 @@ fos_user:
     db_driver: orm 
     firewall_name: main
     user_class: Rest\UserBundle\Entity\User
+
+#Fos Auth Configuration
+fos_oauth_server:
+    db_driver: orm
+    client_class:        Rest\AuthBundle\Entity\Client
+    access_token_class:  Rest\AuthBundle\Entity\AccessToken
+    refresh_token_class: Rest\AuthBundle\Entity\RefreshToken
+    auth_code_class:     Rest\AuthBundle\Entity\AuthCode
+    service:
+        user_provider: fos_user.user_manager
