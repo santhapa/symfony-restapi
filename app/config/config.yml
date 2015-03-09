@@ -75,10 +75,17 @@ swiftmailer:
 sensio_framework_extra:
     view:
         annotations: false
-    
+
+#Fos Rest configuration
 fos_rest:
     param_fetcher_listener: true
     body_listener: true
     format_listener: true
     view:
         view_response_listener: 'force'
+
+#Fos User Configuration
+fos_user:
+    db_driver: orm 
+    firewall_name: main
+    user_class: Rest\UserBundle\Entity\User
