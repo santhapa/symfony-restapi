@@ -1,9 +1,9 @@
-# H1 Symfony Rest Bundle
+# Symfony Rest Bundle
 
-## H2 Introduction
+## Introduction
 Basic foundation for Rest Api with Symfony Rest Api Bundle
 
-## H2 Client Creation
+## Client Creation
 In order to create client from command line just execute below code from the program root directory
 
 ```
@@ -17,7 +17,7 @@ The command will register an OAuth client on the platform side, and will Output 
 Added a new client with public id 7_9ymz4jb9rrsc48o4w8gg44gcsk4kwckg4og04k4okk8ogkw08, secret 2upzm384cxq848gos8k8sw8wwk4848g80ko8ww8sc8804gkcco
 ```
 
-#### H4 Check if it Works
+#### Check if it Works
 Execute the following request in your browser with the client id and secret you have
 ```
 http://localhost/test/web/app_dev.php/oauth/v2/token?client_id=7_9ymz4jb9rrsc48o4w8gg44gcsk4kwckg4og04k4okk8ogkw08&client_secret=2upzm384cxq848gos8k8sw8wwk4848g80ko8ww8sc8804gkcco&grant_type=client_credentials
