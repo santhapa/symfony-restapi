@@ -1,4 +1,13 @@
-We can get access token from multiple approaches and they are as:
+We can get access token from multiple approaches and different grant types are,
+
+```	
+	const GRANT_TYPE_AUTH_CODE = 'authorization_code';
+    const GRANT_TYPE_IMPLICIT = 'token';
+    const GRANT_TYPE_USER_CREDENTIALS = 'password';
+    const GRANT_TYPE_CLIENT_CREDENTIALS = 'client_credentials';
+    const GRANT_TYPE_REFRESH_TOKEN = 'refresh_token';
+    const GRANT_TYPE_EXTENSIONS = 'extensions';
+```
 
 ## Get Authorization Code
 Request url on the browser
