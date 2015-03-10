@@ -8,6 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Table(name="tbl_client")
  * @ORM\Entity
+ * @ORM\HasLifecycleCallbacks 
  */
 class Client extends BaseClient
 {
@@ -21,6 +22,24 @@ class Client extends BaseClient
     public function __construct()
     {
         parent::__construct();
+    }
+
+    /**
+    * @ORM\Column(type="datetime", name="created_date_time")
+    */
+    private $createdDateTime;
+
+    public function getCreatedDateTime()
+    {
+        return $this->createdDateTime;
+    }
+
+    /** 
+    * @ORM\PrePersist 
+    */
+    public function setCreatedDateTime()
+    {
+        $this->createdDateTime = new \DateTime();
     }
 }
 
