@@ -1,0 +1,26 @@
+<h2>New Client</h2>
+	
+<form class="form-horizontal" method="POST">
+
+    {{ form_errors(form) }}
+
+	<div class="control-group">
+		<div class="control-label">
+        	{{ form_label(form.redirect_uri) }}
+        </div>
+        
+        <div class="controls">
+        	{{ form_widget(form.redirect_uri, {'attr' : {'placeholder' : 'Separate multiple uri with ;'}}) }}
+        	
+        	<span class="">Separate multiple uri's with ';'</span>        	
+        </div>
+    </div>
+    {{form_rest(form)}}
+    <div class="control-group">
+    	<div class="controls">
+    		<input class="btn btn-info" type="submit" value="Create"/>
+        </div>
+    </div>
+    
+    
+</form>

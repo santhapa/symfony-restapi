@@ -1,3 +1,7 @@
-rest_auth_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: RestAuthBundle:Default:index }
+clientPage:
+    path: /client
+    defaults: { _controller:RestAuthBundle:Client:index }
+
+createClient:
+    path:     /client/new
+    defaults: { _controller: RestAuthBundle:Client:createClient }
