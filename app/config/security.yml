@@ -20,6 +20,9 @@ security:
     providers:
         fos_userbundle:
             id: fos_user.user_provider.username
+        # user_secured:
+        #     name: user_security
+        #     entity: { class: Rest\AuthBundle\Entity\User, property: username }
 
     firewalls:
         api:
@@ -27,6 +30,13 @@ security:
             fos_oauth:  true
             stateless:  true
             anonymous: false
+
+        # oauth_secured:
+        #     pattern: ^/oauth
+        #     provider: fos_userbundle
+        #     http_basic: ~
+        #     anonymous: false
+        #     context: primary_auth
 
         main:
             pattern: ^/
@@ -38,21 +48,20 @@ security:
                 target: /login
                 invalidate_session: false
             anonymous:    true
+            # context: primary_auth
 
         oauth_authorize:
             pattern:    ^/oauth/v2/auth
             security:   false
-            form_login:
-                provider: fos_userbundle
 
         oauth_token:
             pattern:    ^/oauth/v2/token
             security:   false
+
 
     access_control:     
         - { path: ^/, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/admin/, role: ROLE_ADMIN }
         - { path: ^/api, roles: [ IS_AUTHENTICATED_FULLY ] }
