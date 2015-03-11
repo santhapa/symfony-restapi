@@ -35,12 +35,12 @@ class ClientController extends Controller{
 	        $newClientId = $client->getPublicId();
 	        $newSecret = $client->getSecret();
 
-	        // $request->getSession()->getFlashBag()->add(
-	        //     'createClient',
-	        //     'Your changes were saved!'
-	        // );
+	        $request->getSession()->getFlashBag()->add(
+	            'createClient',
+	            'Added a new client with public id '.$newClientId.' and secret '.$newSecret
+	        );
 
-			return $this->redirect($this->generateUrl('clientPage', array('newClient'=>$newClientId, 'newSecret'=>$newSecret)));
+			return $this->redirect($this->generateUrl('clientPage'));
 		}
 		return $this->render('RestAuthBundle::Client/create_client.html.twig', array('form' => $form->createView()));
 	}
