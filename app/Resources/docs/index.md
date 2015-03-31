@@ -39,6 +39,6 @@ Or an intermediate grant type – password. You provide a client id, client secr
 So the Grant Type represents the flow needed for the Client to obtain Access Token.
 
 ## Advanced Topics
-[Creating New Client](http://gitlab.f1soft.com/sanjip.thapa/symfony-rest-bundle/blob/master/app/Resources/docs/client-creation.md)
+[Creating New Client](client-creation.md)
 
-[Grant Types](http://gitlab.f1soft.com/sanjip.thapa/symfony-rest-bundle/blob/master/app/Resources/docs/default-grant-types.md)
+[Grant Types](default-grant-types.md)

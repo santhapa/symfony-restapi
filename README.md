@@ -5,4 +5,4 @@ Basic foundation for Rest Api with Symfony Rest Api Bundle. The docs are created
 
 
 ## Reference Docs
-Refer [docs](http://gitlab.f1soft.com/sanjip.thapa/symfony-rest-bundle/blob/master/app/Resources/docs/index.md) for knowing to use the oauth server.
+Refer [docs](app/Resources/docs/index.md) for knowing to use the oauth server.

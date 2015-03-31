@@ -100,4 +100,4 @@ For eg: On my localhost it looks like
 http://localhost/testserver/web/app_dev.php/api/post/all?access_token=ZjNmNmZmNjBmNjIzNDdlZDM2MjQwYjNlMzYyMzMzYmNlMzY3MmJkMjY2ODVhMTA5ZjY4YTE1YWU1MzIxZWU3MA&expires_in=3600&token_type=bearer
 ```
 
-#### &laquo;[Back to Index](http://gitlab.f1soft.com/sanjip.thapa/symfony-rest-bundle/blob/master/app/Resources/docs/index.md)
+#### &laquo;[Back to Index](index.md)
